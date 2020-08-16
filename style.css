@@ -1,0 +1,196 @@
+/* Template By Abdullah Al Nahian */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    color: #000;
+    text-align: center;
+    overflow: hidden;
+    max-width: 100vw;
+    height: 100vh;
+    background: url("background.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* wrapper styling */
+
+/* container styling */
+.container {
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+/* header styling */
+.container h1 {
+    margin-bottom: 30px;
+}
+
+.styled-header {
+    font-weight: normal;
+    color: #0080fe;
+}
+
+
+/* search panel styling  */
+.search-panel {
+    display: inline-block;
+}
+
+
+/* search box styling */
+.search-box {
+    height: 52px;
+    width: 550px;
+    border: none;
+    padding: 0 20px;
+    outline: none;
+    box-shadow: 0 30px 80px 0px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+}
+
+::placeholder {
+    font-size: 16px;
+}
+
+/* search button styling */
+button {
+    background-color: #0080fe;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 20px 30px;
+    margin-left: 5px;
+    outline: none;
+    box-shadow: 0 30px 80px 0px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #0166ca;
+}
+
+/* search icon styling */
+.search-icon {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs, 1));
+    width: 16px;
+    height: 16px;
+    border: 2px solid;
+    border-radius: 100%;
+    margin-left: -4px;
+    margin-top: -4px
+}
+
+.search-icon::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 3px;
+    width: 2px;
+    height: 8px;
+    background: currentColor;
+    transform: rotate(-45deg);
+    top: 10px;
+    left: 12px
+}
+
+/* cursor styling */
+.container h1 span.cursor {
+    display: inline-block;
+    background-color: #0080fe;
+    margin-left: 0.1rem;
+    width: 2px;
+    animation: blink 1s infinite;
+}
+
+.container h1 span.cursor.typing {
+    animation: none;
+}
+
+@keyframes blink {
+    0% {
+        background-color: #0080fe;
+    }
+
+    49% {
+        background-color: #0166ca;
+    }
+
+    50% {
+        background-color: transparent;
+    }
+
+    99% {
+        background-color: transparent;
+    }
+
+    100% {
+        background-color: #0080fe;
+    }
+}
+
+
+/* responsive stylings */
+@media screen and (max-width: 767px) {
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .search-panel {
+        display: flex;
+        max-width: 300px;
+    }
+
+    .search-box {
+        height: 50px;
+        width: 180px;
+    }
+
+    button {
+        padding: 0px 20px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .search-panel {
+        display: flex;
+    }
+
+    .search-box {
+        width: 350px;
+    }
+
+}
+
+@media screen and (min-width: 769px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .search-panel {
+        width: 600px;
+    }
+
+    .search-box {
+        width: 500px;
+    }
+}
